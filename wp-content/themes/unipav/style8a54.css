@@ -1,0 +1,109 @@
+/**
+Theme Name: UNIPav Identity
+Author: Giovanni Gardin
+Author URI: https://www.giovannigardin.com
+Description: Tema realizzato su misura per UNIPav.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: unipav-identity
+Template: astra
+*/
+
+.page-id-3   .main-header-bar,
+.page-id-3   .ast-above-header,
+.page-id-212 .main-header-bar,
+.page-id-212 .ast-above-header {
+	background-color: #0a2d64;
+}
+
+.elementor-lightbox .dialog-lightbox-close-button {
+	margin-top: 15px !important;
+}
+
+/**
+ * Flickity
+ */
+
+#flickity-slideshow {}
+
+.carousel-cell {
+
+}
+
+.carousel-cell {
+	width: 80% !important;
+	margin: 0 10px;
+  	max-height: 768px !important;
+ 	overflow: hidden !important;
+	background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center;
+	height: 768px;
+  	/* flex-box, center image in cell */
+  	display: -webkit-box;
+  	display: -webkit-flex;
+  	display: flex !important;
+  	-webkit-box-pack: center;
+  	-webkit-justify-content: center;
+    justify-content: center !important;
+ 	-webkit-align-items: center;
+    align-items: center !important;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+	opacity: 1;
+}
+
+.carousel-cell-title {
+	position: absolute;
+    bottom: 8px;
+    left: 8px;
+	margin-bottom: 0 !important;
+	margin-right: 8px;
+    color: #f1f2f3 !important;
+    background: rgba(0,0,0,0.75);
+    padding: 4px;
+}
+@media all and (max-width: 800px) {
+	.carousel-cell-title {
+		font-size: 1.2em !important;
+	}
+}
+
+.flickity-prev-next-button {
+	padding: 0 !important;
+}
+
+.flickity-page-dots .dot {
+	background: #f1f2f3;
+}
+
+/**
+ * Footer
+ */
+
+.contatti-unipav ul {
+	font-size:16px;
+	line-height:24px;
+}
+
+.contatti-unipav li {
+	width: 100%;
+	display: inline-flex;
+	margin-bottom: 8px;
+}
+
+.contatti-unipav span {
+	height:24px;
+	width:24px;
+	margin-right:12px;
+	text-align: center;
+}
+
+.footer-adv .widget-title {
+	height: 20px;
+	margin-bottom: 2.8em;
+}
