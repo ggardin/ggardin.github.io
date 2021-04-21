@@ -1,0 +1,482 @@
+/**
+Theme Name: Barchessa Loredan
+Author: Giovanni Gardin
+Author URI: https://giovannigardin.com
+Description: Tema sviluppato per Barchessa Loredan.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: barchessa-loredan
+Template: astra
+*/
+
+/**
+ * #################### CSS VARIABLES ####################
+ */
+:root {
+	/*
+	--cl-vigneto: #0C4F3C;		/* verde *
+	--cl-vino: #B51A44;			/* rosso *
+	--cl-terra: #C56A19;		/* terra di siena *
+	--cl-cielo: #F0FAFC;		/* azzurro *
+	--cl-cenere: #2B2824; 		/* testo scuro*
+	--cl-ghiaccio: #F3F3F3;		/* testo chiaro *
+	--cl-skin: #FDF6EE;			/* rosa *
+	--cl-pale: #FFFBF7;			/* rosa sfondo *
+	--cl-tan: #F6EDE4;			/* shade più scuro *
+	--cl-ghiaia: #DBD6D0;		/* grigio *
+	--cl-sabbia: #D5CEC4;		/* shade più scuro */
+	
+	--bo-radius: 8px;			/* border radius */
+	
+	--cl-vigneto: #0C4F3C;		/* verde */
+	--cl-vigneto-100: #DDF2EC;
+	--cl-vigneto-200: #92D9C5;
+	--cl-vigneto-300: #179C76;
+	--cl-vigneto-400: #117055;
+	--cl-vigneto-800: #083629;
+	--cl-vigneto-900: #001E16;
+	--cl-vino: #B51A44;			/* rosso */
+	--cl-terra: #C56A19;		/* terra di siena */
+	--cl-cenere: #2B2824; 		/* testo scuro*/
+	--cl-cenere-dark: #100901;
+	--cl-costa: #FBF9F7;		/* testo chiaro */
+	--cl-sand: #C9ACA6;			/* champagne ~ rose gold */
+	--cl-sand-dark: #C19C94;	/* champagne dark */
+	--cl-skin: #F6EDE4;			/* beige */
+	--cl-skin-dark: #E4D0BB; 	/* beige dark */
+	
+	--bg-topography: url(https://ggardin.github.io/wp-content/uploads/2021/04/topography.svg);
+	--bg-vigna-palazzon: url(https://ggardin.github.io/wp-content/uploads/2021/04/sfondo-palazzon.jpg);
+	--bg-vigna-busa: url(https://ggardin.github.io/wp-content/uploads/2021/04/sfondo-busta.jpg);
+	--bg-vigna-tocchetto: url(https://ggardin.github.io/wp-content/uploads/2021/04/sfondo-tocchetto.jpg);
+}
+
+/**
+ * #################### ANIMATIONS ####################
+ */
+
+@-webkit-keyframes up {
+  	100% {
+		opacity: 1;
+		transform: translateY(0);
+  	}
+}
+@keyframes up {
+  	100% {
+		opacity: 1;
+    	transform: translateY(0);
+  	}
+}
+
+/**
+ * #################### TEXT ####################
+ */
+
+.text-light {
+	color: var(--cl-costa) !important;
+}
+
+.text-dark {
+	color: var(--cl-cenere) !important;
+}
+
+.text-120 {
+	font-size: 120% !important;
+}
+
+.text-150 {
+	font-size: 150% !important;
+}
+
+.text-180 {
+	font-size: 180% !important;
+}
+.hero-section h1,
+header.woocommerce-products-header h1.page-title {
+	color: var(--cl-cenere);
+	font-size: 4em;
+	text-align: center;
+	margin-bottom: 0;
+	transform: translateY(5rem);
+	opacity: 0;
+	-webkit-animation: up .4s cubic-bezier(.77, .03, 0, .99) forwards;
+			animation: up .4s cubic-bezier(.77, .03, 0, .99) forwards;
+  	z-index: 1;
+}
+
+#colophon .widget h2.widget-title {
+	font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+/**
+ * #################### CONTAINER ####################
+ */
+
+.border {
+	border: 1px solid currentColor;
+	border-collapse: collapse;
+}
+
+.rounded {
+	border-radius: var(--bo-radius);
+}
+
+.shadow-skin {
+	-webkit-box-shadow: 10px 20px 80px -20px rgb(218,209,200);
+	-moz-box-shadow: 10px 20px 80px -20px rgb(218,209,200);
+	box-shadow: 0 20px 80px -20px rgb(218 209 200);
+}
+
+.shadow-darkest {
+	-webkit-box-shadow: 10px 20px 80px -20px rgb(37, 30, 20);
+	-moz-box-shadow: 10px 20px 80px -20px rgb(37, 30, 20);
+	box-shadow: 0 20px 80px -20px rgb(37 30 20);
+}
+
+.separator-r-skin {
+	border-right: 1px solid var(--cl-skin-dark);
+}
+
+.separator-r-sand {
+	border-right: 1px solid var(--cl-sand-dark);
+}
+
+.bg-light {
+	background-color: var(--cl-skin);
+	border-color: var(--cl-skin-dark);
+}
+
+.bg-dark {
+	background-color: var(--cl-sand);
+	border-color: var(--cl-sand-dark);
+}
+
+.bg-darkest {
+	background-color: var(--cl-cenere);
+	border-color: var(--cl-cenere-dark);
+}
+
+.vigneto {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: right center;
+}
+
+.vigneto img {
+	-webkit-filter: drop-shadow(0 8px 60px var(--cl-cenere));
+  	filter: drop-shadow(0 8px 60px var(--cl-cenere));
+}
+
+.vigneto.bg-palazzon {
+	background-image: var(--bg-vigna-palazzon);
+}
+
+.vigneto.bg-busa {
+	background-image: var(--bg-vigna-busa);
+}
+
+.vigneto.bg-tocchetto {
+	background-image: var(--bg-vigna-tocchetto);
+}
+
+.hero-section {
+	padding-top: 25%;
+	padding-bottom: 20%;
+	max-height: 512px;
+    -webkit-box-shadow: 0px 8px 24px 0px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 8px 24px 0px rgb(0 0 0 / 50%);
+}
+
+.hero-highlight {
+	background-color: var(--cl-sand);
+	background-image: var(--bg-topography);
+	border-width: 1px;
+	border-color: var(--cl-sand-dark);
+	border-style: solid;
+    margin-top: -3rem !important;
+	margin-bottom: 6rem !important;
+    z-index: 1;
+    position: relative;
+    padding: 4rem;
+    border-radius: var(--bo-radius);
+	-webkit-box-shadow: 0px 80px 120px -60px rgba(214,178,171,0.7);
+	-moz-box-shadow: 0px 80px 120px -60px rgba(214,178,171,0.7);
+	box-shadow: 0px 80px 120px -60px rgb(214 179 171 / 70%);
+}
+
+p.hero-highlight {
+	font-size: 150% !important;
+    text-align: center;
+}
+
+.limit-width {
+	max-width: 768px;
+}
+
+.offset-hor > div > figure:first-of-type > img {
+	margin-left: -1rem;
+}
+
+.offset-hor > div > figure:last-of-type > img {
+	margin-left: 1rem;
+}
+
+.offset-ver > div:nth-of-type(1) > figure > img {
+	margin-top: -2rem;
+}
+
+.offset-ver > div:nth-of-type(2) > figure > img {
+	margin-top: 2rem;
+}
+
+.devnote {
+	background-color: #fce9ee;
+	border-width: 2px;
+	border-color: var(--cl-vino);
+	border-style: solid;
+	border-radius: var(--bo-radius);
+	padding: 2rem;
+}
+
+/**
+ * #################### SPACING ####################
+ */
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.p-1 {
+	padding: 1rem !important;
+}
+
+.p-2 {
+	padding: 2rem !important;
+}
+
+.m-0 {
+	margin: 0 !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.mb-05 {
+	margin-bottom: .5rem !important;
+}
+
+.mb-1 {
+	margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+	margin-bottom: 2rem !important;
+}
+
+.mb-3 {
+	margin-bottom: 3rem !important;
+}
+
+.mb-6 {
+	margin-bottom: 6rem !important;
+}
+
+.mb-8 {
+	margin-bottom: 8rem !important;
+}
+
+.my-1 {
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+}
+
+.my-2 {
+	margin-top: 2rem !important;
+	margin-bottom: 2rem !important;
+}
+
+.my-3 {
+	margin-top: 3rem !important;
+	margin-bottom: 3rem !important;
+}
+
+.my-6 {
+	margin-top: 6rem !important;
+	margin-bottom: 6rem !important;
+}
+
+.my-8 {
+	margin-top: 8rem !important;
+	margin-bottom: 8rem !important;
+}
+
+.m-center {
+    margin: 0 auto;
+}
+
+/**
+ * #################### INTERACTIONS STYLING ####################
+ */
+
+.wp-block-button > a,
+input[type=submit].wpcf7-submit {
+	box-shadow: inset 0 1px 0 #073a2b,
+				0 1px 3px hsla(0, 0%, 0%, .2);
+}
+
+input[type=email], input[type=number], input[type=password], input[type=reset], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+	border-color: var(--cl-skin-dark);
+    border-radius: var(--bo-radius);
+    background: var(--cl-skin);
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=reset]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=url]:focus, select:focus, textarea:focus {
+	border-color: var(--cl-skin-dark) !important;
+    background: var(--cl-skin);
+}
+
+/**
+ * #################### WOOCOMMERCE STYLING ####################
+ */
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+	text-align: center;
+	font-size: 1.4em;
+}
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product .price {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+table.woocommerce-product-attributes > tbody {
+	background-color: var(--cl-skin);
+}
+
+.astra-shop-thumbnail-wrap a.woocommerce-LoopProduct-link {
+	padding: 12px;
+	background-color: var(--cl-tan);
+	border-radius: var(--bo-radius);
+	border: 1px solid var(--cl-cenere);
+}
+
+.astra-shop-thumbnail-wrap a.woocommerce-LoopProduct-link:hover > img:first-child {
+	opacity: 0;
+}
+
+.astra-shop-thumbnail-wrap a.woocommerce-LoopProduct-link:hover {
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU2NkwARSDAwMz9CFGdEEYIowFCMrRJdE4cMUYrWOgYEBLg5SiEsRzFVgeXQ3YvEbWEiKWIUMRCsEAI+LCSM/u6LkAAAAAElFTkSuQmCC) repeat;
+	background-color: var(--cl-skin);
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+	border: 1px solid var(--cl-cenere);
+    background-color: var(--cl-skin);
+    padding: 0 20px;
+	border-radius: var(--bo-radius);
+}
+
+.woocommerce-tabs.wc-tabs-wrapper > ul.wc-tabs {
+	margin: 0 auto !important;
+	border-top: 0 !important;
+    width: max-content;
+    display: flex;
+}
+
+.woocommerce-tabs.wc-tabs-wrapper > ul.wc-tabs > li {
+	padding: 0 12px !important;
+}
+
+.ast-desktop .ast-menu-hover-style-overline>.menu-item>.menu-link:before,
+.ast-desktop .ast-menu-hover-style-underline>.menu-item>.menu-link:before {
+	height: 3px;
+}
+
+/**
+ * #################### CUSTOM ELEMENTS STYLING ####################
+ */
+
+.vino {
+	padding: 3em;
+	margin: 0;
+	background-color: var(--cl-skin);
+	border-color: var(--cl-skin-dark);
+	border-width: 1px 1px 0 1px;
+	border-style: solid;
+	border-collapse: collapse;
+}
+
+.vino:last-of-type {
+	border-bottom-width: 1px;
+}
+
+.vino:hover {
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAP0lEQVQoU2NkwARSDAwMz9CFGdEEYIowFCMrRJdE4cMUYrWOgYEBLg5SiEsRzFVgeXQ3YvEbWEiKWIUMRCsEAI+LCSM/u6LkAAAAAElFTkSuQmCC) repeat;
+	background-color: var(--cl-sand);
+}
+
+.vino .bottiglia {
+	margin: 0 0 0 auto;
+}
+
+.ast-breadcrumbs-wrapper {
+	margin-top: 2rem
+}
+
+/**
+ * #################### ICON STYLING ####################
+ */
+.md-icon {
+	display: block;
+	width: 64px;
+    height: 64px;
+}
+
+.icon-bg-skin-dark {
+	border-radius: 100%;
+    padding: 10px;
+	background-color: var(--cl-skin-dark);
+}
+
+.icon-shadow {
+	box-shadow: 0 4px 8px -4px rgb(0 0 0 / 50%);
+}
+
+/**
+ * #################### MISC STYLING ####################
+ */
+
+ul.no-list {
+	margin: 0 0 1.6em 0;
+  	padding: 0;
+  	list-style: none;
+  	display: grid;
+  	grid-gap: .5em;
+}
+
+ul.no-list > li {
+	display: grid;
+  	grid-template-columns: 0 1fr;
+  	grid-gap: 2.5em;
+  	align-items: start;
+}
+
+ul.no-list > li::before {
+  	content: attr(data-icon);
+  	font-size: 1.25em;
+	line-height: 1.5;
+}
+
+header .main-header-bar.ast-sticky-active {
+	-webkit-backdrop-filter: saturate(180%) blur(5px);
+	backdrop-filter: saturate(180%) blur(5px);
+}
+
+.ast-builder-menu-1 .sub-menu .menu-item > .menu-link {
+	color: var(--bg-cenere) !important;
+}
