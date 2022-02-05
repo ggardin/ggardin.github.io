@@ -1,0 +1,417 @@
+/**
+Theme Name: Benedetti Liquori
+Author: Giovanni Gardin
+Author URI: https://giovannigardin.com
+Description: Tema sviluppato per Benedetti Liquori.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: benedetti-liquori
+Template: astra
+*/
+
+/**
+ * ------------------------- VARIABLES -------------------------
+ */
+:root {
+	--cl-choco: #0A0700;
+	--cl-almond: #A0643E;
+	--cl-milk: #FFFAF0;
+	--cl-watery-milk: #FFFAF045;
+	--cl-nut: #d6abab;
+	--cl-gold: #B88846;
+	--cl-shine: #E0BE8E;
+	--cl-border: #EBEBEB;
+	
+	--bg-pattern: url('/wp-content/themes/gg-theme/assets/pattern-rice-paper.png');
+	
+	--bg-image: url('https://www.benedettiliquori.com/wp-content/uploads/2021/05/benedetti-liquori-artigianali-documento-storico-ricevuta-scaled.jpg');
+}
+
+.ast-theme-transparent-header #masthead .site-logo-img img {
+	width: 96px;
+	height: 96px;
+}
+
+@media (max-width: 921px) {
+	.reverse-column {
+		flex-direction: column-reverse;
+	}
+}
+
+/**
+ * ------------------------- TEXT -------------------------
+ */
+
+.text-light {
+	color: var(--cl-milk) !important;
+}
+
+.text-dark {
+	color: var(--cl-choco) !important;
+}
+
+.text-outline {
+	color: var(--cl-milk) !important;
+  	-webkit-text-fill-color: transparent;
+  	-webkit-text-stroke-width: 1px;
+  	-webkit-text-stroke-color: var(--cl-milk);
+	text-transform: uppercase !important;
+	letter-spacing: .1em;
+}
+
+.text-120 {
+	font-size: 120% !important;
+	line-height: 1.2 !important;
+}
+.text-150 {
+	font-size: 150% !important;
+	line-height: 1.3 !important;
+}
+.text-180 {
+	font-size: 180% !important;
+	line-height: 1.4 !important;
+}
+
+.ast-footer-copyright a {
+	color: var(--cl-shine);
+}
+.ast-footer-copyright a:hover {
+	color: var(--cl-milk);
+}
+
+.horeca-features .icon {
+	width: 2rem;
+	height: 2rem;
+	display: inline-block;
+	margin-right: .8rem;
+}
+
+.horeca-features h3 {
+	display: inline-block;
+	line-height: 2rem;
+	vertical-align: top;
+}
+
+.horeca-features p {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+/**
+ * ------------------------- SPACING -------------------------
+ */
+
+.p-0 {
+	padding: 0 !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.mb-16 {
+	margin-bottom: 16px;
+}
+
+.mb-32 {
+	margin-bottom: 32px;
+}
+
+.mb-64 {
+	margin-bottom: 64px;
+}
+
+.mb-128 {
+	margin-bottom: 128px;
+}
+
+.my-0 {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+.my-32 {
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.my-64 {
+	margin-top: 64px;
+	margin-bottom: 64px;
+}
+
+.my-128 {
+	margin-top: 128px;
+	margin-bottom: 128px;
+}
+
+/**
+ * ------------------------- WOOCOMMERCE -------------------------
+ */
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product .wc-block-grid__product-title {
+	text-align: center;
+	font-size: 1.4em;
+}
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product .price {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.wc-block-grid__product-image:hover img,
+.astra-shop-thumbnail-wrap:hover img {
+	transition: transform .2s ease-in-out;
+	transform: scale(1.04);
+}
+
+.cart-collaterals > div,
+.woocommerce-cart-form .shop_table,
+.checkout #order_review.woocommerce-checkout-review-order,
+.checkout #order_review_heading {
+	background-color: var(--cl-watery-milk);
+}
+
+.woocommerce-product-gallery {
+	background-color: var(--cl-watery-milk);
+	border: 1px solid var(--cl-border);
+	pointer-events: none;
+}
+
+.product_meta .posted_in,
+.product_meta .tagged_as {
+	display: none !important;
+}
+
+.product .summary,
+.product .woocommerce-tabs {
+	margin-bottom: 6rem !important;
+}
+
+/**
+ * ------------------------- CONTAINERS -------------------------
+ */
+
+.rotate-r1 {
+	transform: rotate(1deg);
+}
+.rotate-l1 {
+	transform: rotate(-1deg);
+}
+.rotate-r2 {
+	transform: rotate(2deg);
+}
+.rotate-l2 {
+	transform: rotate(-2deg);
+}
+.rotate-r3 {
+	transform: rotate(3deg);
+}
+.rotate-l3 {
+	transform: rotate(-3deg);
+}
+
+#content {
+	background-image: var(--bg-pattern),
+					  rgb(235,227,209); /* fallback */
+	background-image: var(--bg-pattern),
+					  linear-gradient(0deg, rgba(235,227,209,1) 0%, rgba(247,243,233,1) 25%, #FFFFFF 100%);
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+	background-position: 0 0;
+	background-repeat: repeat;
+	padding-bottom: 3rem;
+}
+
+#primary {
+	padding-top: 10rem;
+	margin-top: 0;
+}
+.woocommerce-shop #primary {
+	margin-top: 4rem;
+}
+@media (max-width: 921px) {
+	#primary {
+		padding-top: 8rem !important;
+		margin-top: 0 !important;
+	}
+}
+
+@media (min-width: 922px) {
+	.woocommerce #content .ast-woocommerce-container div.product div.summary {
+		padding-top: 2em;
+	}
+}
+
+ul.menu-list {
+	margin: 0;
+	padding: 1rem;
+	list-style: none;
+	text-transform: uppercase;
+	position: sticky;
+	top: 60px;
+	background: #fffaf4;
+    border: 1px solid #fae7d0;
+    border-radius: var(--bo-radius);
+}
+
+.hero-section {
+	box-shadow: 0px 4px 50px 10px #0a07006a; /* Choco */
+}
+
+.hero-section.hero-shop {
+	margin: -4em -100px 64px -100px;
+    max-width: unset;
+    width: unset;
+}
+@media (max-width: 921px) {
+	.hero-section.hero-shop {
+		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.hero-section.hero-shop h1 {
+	margin-bottom: 20px;
+}
+
+.cta-hero {
+	overflow: hidden;
+	margin-top: -45px;
+	margin-bottom: 64px;
+	padding-left: 1rem;
+	padding-right: 1rem;	
+}
+
+.cta-hero img {
+	filter: blur(2px);
+	height: 105%;
+}
+
+.cta-hero .wp-block-button:last-child > a {
+	color: var(--cl-milk);
+	border-color: var(--cl-choco);
+	background-color: var(--cl-choco);
+}
+
+.cta-hero .wp-block-button:last-child:hover > a {
+	border-color: var(--cl-almond);
+	background-color: var(--cl-almond);
+}
+
+.cta-hero .horeca-callout {
+	font-size: 90%;
+	opacity: .8;
+}
+.cta-hero .horeca-callout a {
+	color: var(--cl-milk);
+	text-decoration: underline;
+}
+.cta-hero .horeca-callout a:hover {
+	color: var(--cl-shine);
+}
+
+.center-section {
+	width: 80%;
+	margin: 0 auto;
+}
+@media (max-width: 922px) {
+	.center-section {
+		width: 100%;
+	}
+}
+
+.square-pattern {
+	background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='50' height='50' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M50 25L37.5 50 25 25 37.5 0zm-25 0L12.5 50 0 25 12.5 0z'  stroke-width='2' stroke='hsla(35, 45%, 50%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(/wp-content/themes/gg-theme/%23a)'/></svg>");
+}
+
+.quote-text cite {
+	font-size: 80%;
+}
+
+.quote-xl {
+	padding: 0;
+}
+
+.quote-text {
+	background-color: var(--cl-milk);
+	font-size: 120%;
+}
+
+.quote-xl .quote-text {
+	padding: 10rem 2rem 9rem 2rem;	
+}
+
+.quote-xl .quote-image {
+	position: relative;
+	bottom: -9rem;
+	margin-top: -5rem;
+	z-index: 1;
+}
+
+.quote-xl .quote-image img {
+	box-shadow: 0 2px 30px var(--cl-shine);
+}
+
+.quote-xl .quote-signature {
+	position: relative;
+	top: -9rem;
+	margin-bottom: -5rem;
+	z-index: 1;
+}
+
+.quote-xl .quote-signature img {
+	width: 200px;
+}
+
+.fancy-border {
+	border: 24px solid var(--cl-gold);
+	border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
+}
+
+.customer-reassurance {
+	display: grid;
+	gap: 1rem 0;
+}
+.customer-reassurance.-two-col {
+	grid-template-columns: min-content auto;
+	grid-template-rows: auto auto;
+	margin-bottom: 1rem;
+}
+.customer-reassurance.-three-col {
+	grid-template-columns: min-content auto auto;
+	grid-template-rows: auto auto auto auto auto;
+}
+.customer-reassurance svg {
+	margin-right: .5rem;
+}
+.customer-reassurance p,
+.customer-reassurance a,
+.customer-reassurance span {
+	font-size: .9rem;
+	margin-bottom: 0;
+	line-height: 1.5rem;
+}
+.customer-reassurance .additional-info,
+.customer-reassurance .additional-info > a {
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: .8rem;
+}
+
+.footer-reassurance .wp-block-column {
+	padding: 1rem;
+	border: 1px solid var(--cl-almond);
+	background-color: var(--cl-watery-milk);
+	margin-top: 3rem;
+}
+
+.footer-reassurance .wp-block-column h2 {
+	font-size: 1.2rem;
+	margin-bottom: .8rem;
+}
+
+.promo-section {
+	background-color: var(--cl-nut);
+}
