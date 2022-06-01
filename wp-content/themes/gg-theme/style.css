@@ -1,0 +1,330 @@
+/**
+Theme Name: Contemporanea
+Author: Giovanni Gardin
+Author URI: https://giovannigardin.com
+Description: Tema sviluppato per Contemporanea Srl.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: contemporanea
+Template: astra
+*/
+
+/**
+ * #################### CSS VARIABLES ####################
+ */
+:root,
+:before {	
+	--bo-radius: 4px;			/* border radius */
+	--header-h: 70px;			/* header height */
+
+	/* https://coolors.co/020202-0f3957-dcc1b9-f8eeec-fcf7f6 */
+
+	--cl-black: #2B2824;
+
+	--cl-accent-100: #e7ebee;
+	--cl-accent-200: #b7c4cd;
+	--cl-accent-300: #879cab;
+	--cl-accent-400: #577489;
+	--cl-accent-500: #0F3957;	/* prussian blue */
+	--cl-accent-600: #0c2e46;
+	--cl-accent-700: #092234;
+	--cl-accent-800: #081d2c;
+	--cl-accent-900: #05111a;
+
+	--cl-primary-100: #fcf7f6;
+	--cl-primary-200: #f8eeec;
+	--cl-primary-300: #eee0dc;
+	--cl-primary-400: #e3cdc7;
+	--cl-primary-500: #DCC1B9;	/* beige */
+	--cl-primary-600: #b09a94;
+	--cl-primary-700: #84746f;
+	--cl-primary-800: #584d4a;
+	--cl-primary-900: #161312;
+
+	--bg-timeline: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQYV2NgYGD4DwABBAEAcCBlCwAAAABJRU5ErkJggg==);
+	--bg-timeline-item: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAE0lEQVQYV2NkYGD4z4AEGEkXAACaVAQB05+8PAAAAABJRU5ErkJggg==);
+		
+	--extlink: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20viewBox=%220%200%2024%2024%22%3E%3Cpath%20d=%22M14%203v2h3.6l-9.8%209.8%201.4%201.4L19%206.4V10h2V3m-2%2016H5V5h7V3H5a2%202%200%2000-2%202v14a2%202%200%20002%202h14a2%202%200%20002-2v-7h-2v7z%22/%3E%3C/svg%3E);
+	
+	--an-cubez: cubic-bezier(.77, .03, 0, .99);
+}
+
+/**
+ * #################### TEXT ####################
+ */
+
+@media all and (max-width: 922px) {
+
+	.text-120 {
+		font-size: 100% !important;
+	}
+
+	.text-150 {
+		font-size: 120% !important;
+	}
+
+	.text-180 {
+		font-size: 150% !important;
+	}
+
+	.hero-section h1,
+	header.woocommerce-products-header h1.page-title {
+		font-size: 2em !important;
+	}
+}
+
+.text-light {
+	color: var(--cl-primary-100) !important;
+}
+
+.text-dark {
+	color: var(--cl-black) !important;
+}
+
+.text-120 {
+	font-size: 120% !important;
+}
+
+.text-150 {
+	font-size: 150% !important;
+}
+
+.text-180 {
+	font-size: 180% !important;
+}
+
+@media all and (min-width: 922px) {
+	.h3-like {
+		font-size: 1.8em;
+	}
+	.p-like {
+		font-size: 1.4em; /* adjusted to actual P size */
+	}
+}
+
+h1 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.widget .widget-title {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.section-link {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.section-link:hover {
+	text-decoration: underline;
+}
+
+/**
+ * #################### CONTAINER STYLING ####################
+ */
+
+@media all and (max-width: 921px) {
+	.reverse-column {
+		flex-direction: column-reverse;
+	}
+}
+
+div.wp-block-columns {
+	gap: 2.5rem;
+}
+
+.border {
+	border: 1px solid currentColor;
+	border-collapse: collapse;
+}
+
+.rounded {
+	border-radius: var(--bo-radius);
+}
+
+.limit-width {
+	max-width: 768px;
+}
+
+.hero {
+	height: calc( 100vh - var(--header-h) );
+	max-height: 1600px;
+	font-size: 110%;
+}
+
+.hero.wp-block-jetpack-slideshow {
+	display: flex;
+	align-items: center;
+}
+
+#primary {
+	margin-top: 0 !important;
+}
+
+.projects-grid .wp-block-post {
+	padding: 0;
+}
+.projects-grid .wp-block-post figure {
+	margin-bottom: .5rem;
+}
+
+
+/**
+ * #################### SPACING ####################
+ */
+
+.p-0 {
+	padding: 0 !important;
+}
+
+.p-1 {
+	padding: 1rem !important;
+}
+
+.p-2 {
+	padding: 2rem !important;
+}
+
+.m-0 {
+	margin: 0 !important;
+}
+
+.mb-0 {
+	margin-bottom: 0 !important;
+}
+
+.mb-05 {
+	margin-bottom: .5rem !important;
+}
+
+.mb-1 {
+	margin-bottom: 1rem !important;
+}
+
+.mb-2 {
+	margin-bottom: 2rem !important;
+}
+
+.mb-3 {
+	margin-bottom: 3rem !important;
+}
+
+.mb-6 {
+	margin-bottom: 6rem !important;
+}
+
+.mb-8 {
+	margin-bottom: 8rem !important;
+}
+
+.my-1 {
+	margin-top: 1rem !important;
+	margin-bottom: 1rem !important;
+}
+
+.my-2 {
+	margin-top: 2rem !important;
+	margin-bottom: 2rem !important;
+}
+
+.my-3 {
+	margin-top: 3rem !important;
+	margin-bottom: 3rem !important;
+}
+
+.my-6 {
+	margin-top: 6rem !important;
+	margin-bottom: 6rem !important;
+}
+
+.my-8 {
+	margin-top: 8rem !important;
+	margin-bottom: 8rem !important;
+}
+
+.m-center {
+	margin: 0 auto;
+}
+
+/**
+ * #################### CONTACT FORM STYLING ####################
+ */
+
+input[type=email], input[type=number], input[type=password], input[type=reset], input[type=search], input[type=tel], input[type=text], input[type=url], select, textarea {
+	background: var(--cl-primary-200);
+	border: 1px solid var(--cl-primary-300);
+	border-radius: var(--bo-radius);
+}
+
+input[type=email]:focus, input[type=password]:focus, input[type=reset]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=url]:focus, select:focus, textarea:focus {
+	background: var(--cl-primary-300);
+	border-color: var(--cl-primary-400) !important;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+form .legal-disclaimer .wpcf7-acceptance .wpcf7-list-item {
+	margin-left: 0;
+}
+
+/**
+ * #################### HEADER STYLING ####################
+ */
+
+.site-title, .site-title a {
+	letter-spacing: 3px;
+}
+
+.main-header-bar.ast-sticky-active {
+	box-shadow: unset;
+}
+
+@media all and (min-width: 921px) {
+	.ast-desktop .ast-mobile-popup-drawer.active .ast-mobile-popup-inner {
+		width: 20%;
+		max-width: 300px;
+	}
+}
+
+#ast-mobile-popup .ast-mobile-popup-overlay {
+	background-color: rgba(255,255,255,0.2);
+}
+
+#ast-mobile-popup .ast-mobile-popup-inner {
+	height: fit-content;
+	margin: 1rem;
+	border: 1px solid var(--ast-global-color-4);
+	border-radius: var(--bo-radius);
+}
+
+/**
+ * #################### PLUGINS STYLING ####################
+ */
+
+#post-1044 .wp-block-jetpack-slideshow_container .wp-block-jetpack-slideshow_button-prev,
+#post-1044 .wp-block-jetpack-slideshow_container .wp-block-jetpack-slideshow_button-next,
+#post-1044 .wp-block-jetpack-slideshow_container .wp-block-jetpack-slideshow_button-pause,
+#post-1044 .wp-block-jetpack-slideshow_container .wp-block-jetpack-slideshow_pagination {
+	display: none;
+}
+
+/**
+ * #################### CUSTOM ELEMENTS STYLING ####################
+ */
+
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0); 
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap; 
+	width: 1px;
+}
