@@ -215,6 +215,17 @@ div.wp-block-columns {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+	.revert-columns {
+		flex-direction: column-reverse;
+	}
+	.contact-info {
+		margin-top: 6rem;
+	}
+}
+
+.w-100,
+.w-100 img {
+	width: 100% !important;
 }
 
 
