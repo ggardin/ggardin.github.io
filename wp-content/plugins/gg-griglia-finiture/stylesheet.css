@@ -1,7 +1,20 @@
 .finish-wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+@media all and (min-width: 544px) {
+	.finish-wrapper {
+    	grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media all and (min-width: 921px) {
+	.finish-wrapper {
+    	grid-template-columns: repeat(4, 1fr);
+    	gap: 2rem;
+	}
 }
 
 #finishes h3.title {

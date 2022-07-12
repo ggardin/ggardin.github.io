@@ -160,19 +160,34 @@ div.wp-block-columns {
 }
 
 .hero {
-	height: 100vh;
 	max-height: 1600px;
 	font-size: 110%;
-	margin-bottom: var(--header-h);
 }
 
-.hero::after {
-	content: '↓';
-	position: absolute;
-	width: 2rem;
-	text-align: center;
-	top: calc( 100vh - var(--header-h) - 2rem );
-	left: calc( 50% - 1rem );
+.hero, 
+.progetto .entry-header {
+	margin-top: 46px;
+}
+
+@media all and (min-width: 780px) {
+	.hero {
+		height: 100vh;
+		margin-top: 1rem;
+		margin-bottom: var(--header-h);
+	}
+	
+	.hero::after {
+		content: '↓';
+		position: absolute;
+		width: 2rem;
+		text-align: center;
+		top: calc( 100vh - var(--header-h) - 2rem );
+		left: calc( 50% - 1rem );
+	}
+	
+	.progetto .entry-header {
+		margin-top: var(--header-h);	
+	}
 }
 
 .hero.wp-block-jetpack-slideshow {
@@ -189,6 +204,17 @@ div.wp-block-columns {
 }
 .projects-grid .wp-block-post figure {
 	margin-bottom: .5rem;
+}
+
+@media all and (max-width: 780px) {
+	div.gallery-grid-3 {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	div.gallery-grid-4 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 
@@ -380,7 +406,8 @@ ul.main-header-menu li:nth-last-child(4):hover a::after /* Facebook */ {
 	padding-right: 20px;
 }
 
-footer #block-14.widget {
+footer #block-14.widget,
+footer #block-22.widget {
 	margin-bottom: 0;
 }
 
@@ -422,6 +449,12 @@ footer #block-14.widget {
 }
 #jump-to-finish .wp-block-button:hover a {
 	background-color: var(--ast-global-color-7) !important;
+}
+@media all and (max-width: 420px) {
+	#jump-to-finish {
+		display: none;
+		visibility: none;
+	}
 }
 
 /**
